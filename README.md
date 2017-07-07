@@ -1,28 +1,20 @@
 # Multissh
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/multissh`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Runs a ssh command on multiple hosts in parallel.
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'multissh'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install multissh
 
 ## Usage
 
-TODO: Write usage instructions here
+multissh expects one or more hostnames on STDIN and the command and arguments to run as arguments to multissh.
+
+Examples:
+
+`echo foo.bar.com | multissh ls -l`
+
+`cat hosts.txt | multissh "ls -l | grep foo"`
 
 ## Development
 
@@ -32,7 +24,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/multissh.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jegt/multissh.
 
 
 ## License
